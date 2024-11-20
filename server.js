@@ -9,7 +9,7 @@ const webHookRoutes = require("./routes/webhook.routes");
 const app = express();
 
 app.use(cors({}));
-app.use(express.json({ type: ["text/*", "*/json"] }));
+app.use(express.json());
 
 app.use(userAuthRoutes);
 app.use(webHookRoutes);
